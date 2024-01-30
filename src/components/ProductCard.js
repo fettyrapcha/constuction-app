@@ -1,9 +1,45 @@
 import { useCallback } from "react";
 
 const ProductCard = () => {
-  const onFrameContainer1Click = useCallback(() => {
-    // Please sync "Project details" to the project
-  }, []);
+  const cardData = [
+    {
+      imageUrl: '/rectangle-1@2x.png',
+      location: 'Industrial Park, Accra',
+      description: '15 story office complex for all business types',
+      budget: '$4,300',
+    },
+    {
+      imageUrl: '/rectangle-1@2x.png',
+      location: 'Industrial Park, Accra',
+      description: '15 story office complex for all business types',
+      budget: '$4,300',
+    },
+    {
+      imageUrl: '/rectangle-1@2x.png',
+      location: 'Industrial Park, Accra',
+      description: '15 story office complex for all business types',
+      budget: '$4,300',
+    },
+    {
+      imageUrl: '/rectangle-1@2x.png',
+      location: 'Industrial Park, Accra',
+      description: '15 story office complex for all business types',
+      budget: '$4,300',
+    },
+    {
+      imageUrl: '/rectangle-1@2x.png',
+      location: 'Industrial Park, Accra',
+      description: '15 story office complex for all business types',
+      budget: '$4,300',
+    },
+    {
+      imageUrl: '/rectangle-1@2x.png',
+      location: 'Industrial Park, Accra',
+      description: '15 story office complex for all business types',
+      budget: '$4,300',
+    },
+   
+  ];
 
   return (
     <div className="relative w-full flex flex-col items-start justify-start text-left text-sm text-grey-500 font-inter">
@@ -31,6 +67,7 @@ const ProductCard = () => {
         </div>
       </div>
       <div className="w-[1155px] rounded-tl rounded-tr-none rounded-br-none rounded-bl flex flex-row flex-wrap items-start justify-start py-6 px-9 box-border gap-[36px] text-light-black">
+      {cardData.map((card, index) => (
         <div className="w-[337px] rounded-sm bg-white flex flex-col items-start justify-start p-4 box-border gap-[16px]">
           <img
             className="self-stretch relative rounded-xl max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
@@ -41,161 +78,27 @@ const ProductCard = () => {
             <div className="flex flex-col items-start justify-start gap-[6px]">
               <div className="flex flex-row items-center justify-center">
                 <div className="relative leading-[120%] font-medium">
-                  Industrial Park, Accra
+                {card.location}
                 </div>
               </div>
               <div className="flex flex-row items-center justify-center text-xs text-grey">
                 <div className="relative leading-[120%]">
-                  15 story office complex for all business types
+                {card.description}
                 </div>
               </div>
             </div>
             <div className="flex flex-row items-center justify-center text-xs">
               <div className="relative leading-[120%]">
                 <span>{`Budget `}</span>
-                <span className="tracking-[-0.2px] font-semibold">$4,300</span>
+                <span className="tracking-[-0.2px] font-semibold">{card.budget}</span>
               </div>
             </div>
           </div>
         </div>
-        <div
-          className="w-[337px] rounded-sm bg-white flex flex-col items-start justify-start p-4 box-border gap-[16px] cursor-pointer"
-          onClick={onFrameContainer1Click}
-        >
-          <img
-            className="self-stretch relative rounded-xl max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
-            alt=""
-            src="/rectangle-1@2x.png"
-          />
-          <div className="self-stretch flex flex-col items-start justify-start gap-[12px]">
-            <div className="flex flex-col items-start justify-start gap-[6px]">
-              <div className="flex flex-row items-center justify-center">
-                <div className="relative leading-[120%] font-medium">
-                  Industrial Park, Accra
-                </div>
-              </div>
-              <div className="flex flex-row items-center justify-center text-xs text-grey">
-                <div className="relative leading-[120%]">
-                  15 story office complex for all business types
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-center text-xs">
-              <div className="relative leading-[120%]">
-                <span>{`Budget `}</span>
-                <span className="tracking-[-0.2px] font-semibold">$4,300</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[337px] rounded-sm bg-white flex flex-col items-start justify-start p-4 box-border gap-[16px]">
-          <img
-            className="self-stretch relative rounded-xl max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
-            alt=""
-            src="/rectangle-1@2x.png"
-          />
-          <div className="self-stretch flex flex-col items-start justify-start gap-[12px]">
-            <div className="flex flex-col items-start justify-start gap-[6px]">
-              <div className="flex flex-row items-center justify-center">
-                <div className="relative leading-[120%] font-medium">
-                  Industrial Park, Accra
-                </div>
-              </div>
-              <div className="flex flex-row items-center justify-center text-xs text-grey">
-                <div className="relative leading-[120%]">
-                  15 story office complex for all business types
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-center text-xs">
-              <div className="relative leading-[120%]">
-                <span>{`Budget `}</span>
-                <span className="tracking-[-0.2px] font-semibold">$4,300</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[337px] rounded-sm bg-white flex flex-col items-start justify-start p-4 box-border gap-[16px]">
-          <img
-            className="self-stretch relative rounded-xl max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
-            alt=""
-            src="/rectangle-1@2x.png"
-          />
-          <div className="self-stretch flex flex-col items-start justify-start gap-[12px]">
-            <div className="flex flex-col items-start justify-start gap-[6px]">
-              <div className="flex flex-row items-center justify-center">
-                <div className="relative leading-[120%] font-medium">
-                  Industrial Park, Accra
-                </div>
-              </div>
-              <div className="flex flex-row items-center justify-center text-xs text-grey">
-                <div className="relative leading-[120%]">
-                  15 story office complex for all business types
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-center text-xs">
-              <div className="relative leading-[120%]">
-                <span>{`Budget `}</span>
-                <span className="tracking-[-0.2px] font-semibold">$4,300</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[337px] rounded-sm bg-white flex flex-col items-start justify-start p-4 box-border gap-[16px]">
-          <img
-            className="self-stretch relative rounded-xl max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
-            alt=""
-            src="/rectangle-1@2x.png"
-          />
-          <div className="self-stretch flex flex-col items-start justify-start gap-[12px]">
-            <div className="flex flex-col items-start justify-start gap-[6px]">
-              <div className="flex flex-row items-center justify-center">
-                <div className="relative leading-[120%] font-medium">
-                  Industrial Park, Accra
-                </div>
-              </div>
-              <div className="flex flex-row items-center justify-center text-xs text-grey">
-                <div className="relative leading-[120%]">
-                  15 story office complex for all business types
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-center text-xs">
-              <div className="relative leading-[120%]">
-                <span>{`Budget `}</span>
-                <span className="tracking-[-0.2px] font-semibold">$4,300</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[337px] rounded-sm bg-white flex flex-col items-start justify-start p-4 box-border gap-[16px]">
-          <img
-            className="self-stretch relative rounded-xl max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
-            alt=""
-            src="/rectangle-1@2x.png"
-          />
-          <div className="self-stretch flex flex-col items-start justify-start gap-[12px]">
-            <div className="flex flex-col items-start justify-start gap-[6px]">
-              <div className="flex flex-row items-center justify-center">
-                <div className="relative leading-[120%] font-medium">
-                  Industrial Park, Accra
-                </div>
-              </div>
-              <div className="flex flex-row items-center justify-center text-xs text-grey">
-                <div className="relative leading-[120%]">
-                  15 story office complex for all business types
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-center text-xs">
-              <div className="relative leading-[120%]">
-                <span>{`Budget `}</span>
-                <span className="tracking-[-0.2px] font-semibold">$4,300</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          ))}
+        
+           
+        
       </div>
     </div>
   );
